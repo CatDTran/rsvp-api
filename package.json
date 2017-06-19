@@ -1,0 +1,21 @@
+{
+  "name": "rsvp-api",
+  "version": "1.0.0",
+  "description": "An embeddable reservation system for small bussineses",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Cat Tran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "~1.0.0",
+    "express": "~4.8.8",
+    "express-session": "^1.15.3",
+    "mongoose": "~4.10.6",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2"
+  }
+}
