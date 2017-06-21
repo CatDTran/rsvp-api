@@ -1,5 +1,5 @@
 /*
-*NOTE: This file defines the reservations schema model. Use this file to add any middlewares, querries, validations ... related to this schema.
+*NOTE: This file defines the reservation schema model. Use this file to add any middlewares, querries, validations ... related to this schema.
 */
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
