@@ -46,4 +46,6 @@ var RsvpBookSchema =  new Schema({
 
 
 
+//----------------Define Virtuals here----------------//
+
 module.exports = {RsvpBookSchema};
