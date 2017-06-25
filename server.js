@@ -18,17 +18,20 @@ var session      = require('express-session');
 var configDB = require('./config/env/development.js');
 mongoose.connect(configDB.db);
 
-// set up our express application
+// configurations for Express
 app.use(morgan('dev'))
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
-app.set('view engine', 'ejs'); // set up ejs for templating
+app.set('views', './app/views');
+app.set('view engine', 'ejs'); // set up ejs for templatingapp.set('views', '../app/views');
 
 // required for passport
 app.use(session({ secret: 'fusrodah' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session());
+require('./app/routes/routes.js')(app, passport); // set routes files for Express app
 require('./config/passport.js')(passport); // pass passport for configuration
+
 
 // start up server
 var port  = 3000;
